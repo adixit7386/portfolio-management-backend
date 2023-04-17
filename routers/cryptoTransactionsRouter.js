@@ -1,9 +1,15 @@
 const express = require("express");
 const createCryptoTransactionsControllers = require("../controllers/createCryptoTransactionsControllers");
 const getCryptoTransactionsControllers = require("../controllers/getCryptoTransactionsControllers");
+const createMultipleCryptoTransactionsControllers = require("../controllers/createMultipleCryptoTransactionsControllers.js");
 const router = express.Router();
 const verifyToken = require("../middleware/verifyToken");
-router.post("/create", createCryptoTransactionsControllers);
+router.post("/create", verifyToken, createCryptoTransactionsControllers);
 router.get("/get", verifyToken, getCryptoTransactionsControllers);
+router.post(
+  "/createmany",
+  verifyToken,
+  createMultipleCryptoTransactionsControllers
+);
 
 module.exports = router;
