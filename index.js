@@ -6,6 +6,8 @@ const mongoose = require("mongoose");
 const nseStocksRouter = require("./routers/nseStocksRouter");
 const cryptoTransactionsRouter = require("./routers/cryptoTransactionsRouter");
 const errorHandler = require("./middleware/errorHandler");
+const mFundsTransactions = require("./routers/mFundsTransactionsRouter");
+const stocksTransactionsReducer = require("./routers/stocksTransactionsRouter");
 // const { saveData } = require("./controllers/nseStocks");
 dotenv.config();
 
@@ -34,6 +36,8 @@ app.get("/", (req, res) => {
 app.use("/api/user", userRouter);
 app.use("/api/nseStocks", nseStocksRouter);
 app.use("/api/crypto", cryptoTransactionsRouter);
+app.use("/api/stocks", stocksTransactionsReducer);
+app.use("/api/mfunds", mFundsTransactions);
 
 app.use(errorHandler);
 const port = process.env.APP_PORT || 5000;
