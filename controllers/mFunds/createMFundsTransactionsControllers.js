@@ -1,5 +1,5 @@
-const MFundsTransactions = require("../models/MFundsTransactions");
-const customErrorHandler = require("../services/customErrorHandler");
+const MFundsTransactions = require("../../models/MFundsTransactions");
+const customErrorHandler = require("../../services/customErrorHandler");
 const createMFundsTransactionsControllers = async (req, res, next) => {
   console.log(req.body);
   const { symbol, quantity, orderValue, timestamp, type } = req.body;

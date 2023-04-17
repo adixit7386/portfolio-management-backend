@@ -1,6 +1,6 @@
-const MFundsTransactions = require("../models/MFundsTransactions");
-const customErrorHandler = require("../services/customErrorHandler");
-const updateMFundsTransactionsControllers = async (req, res, next) => {
+const StocksTransactions = require("../../models/StocksTransactions");
+const customErrorHandler = require("../../services/customErrorHandler");
+const updateCryptoTransactionsControllers = async (req, res, next) => {
   const { user, symbol, quantity, orderValue, timestamp, type } = req.body;
   if (!user || !symbol || !quantity || !orderValue || !timestamp || !type) {
     return next(
@@ -12,16 +12,16 @@ const updateMFundsTransactionsControllers = async (req, res, next) => {
       customErrorHandler.unAuthorized("You are not allowed to do that")
     );
   }
-  //   const MFundsTransaction = await MFundsTransactions.create(req.body);
+  //   const cryptoTransaction = await CryptoTransactions.create(req.body);
   try {
-    const MfundsTransactionUpdated = await MFundsTransactions.findByIdAndUpdate(
+    const stocksTransactionUpdated = await StocksTransactions.findByIdAndUpdate(
       req.body._id,
       req.body,
       { new: true }
     );
-    res.json(MfundsTransactionUpdated);
+    res.json(stocksTransactionUpdated);
   } catch (error) {
     return next(error);
   }
 };
-module.exports = updateMFundsTransactionsControllers;
+module.exports = updateCryptoTransactionsControllers;

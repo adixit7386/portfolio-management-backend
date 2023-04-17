@@ -1,4 +1,4 @@
-const StocksTransactions = require("../models/StocksTransactions");
+const StocksTransactions = require("../../models/StocksTransactions");
 
 const getStocksTransactionsControllers = async (req, res, next) => {
   try {

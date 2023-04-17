@@ -1,5 +1,5 @@
-const CryptoTransactions = require("../models/CryptoTransactions");
-const customErrorHandler = require("../services/customErrorHandler");
+const CryptoTransactions = require("../../models/CryptoTransactions");
+const customErrorHandler = require("../../services/customErrorHandler");
 const updateCryptoTransactionsControllers = async (req, res, next) => {
   const { user, currency, quantity, orderValue, timestamp, type } = req.body;
   if (!user || !currency || !quantity || !orderValue || !timestamp || !type) {

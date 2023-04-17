@@ -1,8 +1,8 @@
 const express = require("express");
-const createStocksTransactionsControllers = require("../controllers/createStocksTransactionsControllers");
-const getStocksTransactionsControllers = require("../controllers/getStocksTransactionsControllers");
-const createMultipleStocksTransactionsControllers = require("../controllers/createMultipleStocksTransactionsControllers.js");
-const updateStocksTransactionsControllers = require("../controllers/updateStocksTransactionsControllers");
+const createStocksTransactionsControllers = require("../controllers/stocks/createStocksTransactionsControllers");
+const getStocksTransactionsControllers = require("../controllers/stocks/getStocksTransactionsControllers");
+const createMultipleStocksTransactionsControllers = require("../controllers/stocks/createMultipleStocksTransactionsControllers.js");
+const updateStocksTransactionsControllers = require("../controllers/stocks/updateStocksTransactionsControllers");
 const router = express.Router();
 const verifyToken = require("../middleware/verifyToken");
 router.post("/create", verifyToken, createStocksTransactionsControllers);

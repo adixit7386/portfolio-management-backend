@@ -1,4 +1,4 @@
-const MFundsTransactions = require("../models/MFundsTransactions");
+const MFundsTransactions = require("../../models/MFundsTransactions");
 
 const createMFundsTransactionsControllers = async (req, res, next) => {
   try {

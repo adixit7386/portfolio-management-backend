@@ -1,4 +1,4 @@
-const CryptoTransactions = require("../models/CryptoTransactions");
+const CryptoTransactions = require("../../models/CryptoTransactions");
 
 const createMultipleCryptoTransactionsControllers = async (req, res, next) => {
   try {

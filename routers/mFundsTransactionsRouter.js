@@ -1,8 +1,8 @@
 const express = require("express");
-const createMFundsTransactionsControllers = require("../controllers/createMFundsTransactionsControllers");
-const getMFundsTransactionsControllers = require("../controllers/getMFundsTransactionsControllers");
-const createMultipleMFundsTransactionsControllers = require("../controllers/createMultipleMFundsTransactionsControllers.js");
-const updateMFundsTransactionsControllers = require("../controllers/updateMFundsTransactionsControllers");
+const createMFundsTransactionsControllers = require("../controllers/mFunds/createMFundsTransactionsControllers");
+const getMFundsTransactionsControllers = require("../controllers/mFunds/getMFundsTransactionsControllers");
+const createMultipleMFundsTransactionsControllers = require("../controllers/mFunds/createMultipleMFundsTransactionsControllers.js");
+const updateMFundsTransactionsControllers = require("../controllers/mFunds/updateMFundsTransactionsControllers");
 const router = express.Router();
 const verifyToken = require("../middleware/verifyToken");
 router.post("/create", verifyToken, createMFundsTransactionsControllers);

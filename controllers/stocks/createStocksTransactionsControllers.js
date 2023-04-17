@@ -1,5 +1,5 @@
-const StocksTransactions = require("../models/StocksTransactions");
-const customErrorHandler = require("../services/customErrorHandler");
+const StocksTransactions = require("../../models/StocksTransactions");
+const customErrorHandler = require("../../services/customErrorHandler");
 const createStocksTransactionsControllers = async (req, res, next) => {
   console.log(req.body);
   const { user, symbol, quantity, orderValue, timestamp, type } = req.body;
