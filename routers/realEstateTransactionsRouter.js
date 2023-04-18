@@ -1,8 +1,8 @@
 const express = require("express");
-const createRealEstateTransactionsControllers = require("../controllers/RealEstate/createRealEstateTransactionsControllers");
-const getRealEstateTransactionsControllers = require("../controllers/RealEstate/getRealEstateTransactionsControllers");
-const createMultipleRealEstateTransactionsControllers = require("../controllers/RealEstate/createMultipleRealEstateTransactionsControllers.js");
-const updateRealEstateTransactionsControllers = require("../controllers/RealEstate/updateRealEstateTransactionsControllers");
+const createRealEstateTransactionsControllers = require("../controllers/realEstate/createRealEstateTransactionsControllers");
+const getRealEstateTransactionsControllers = require("../controllers/realEstate/getRealEstateTransactionsControllers");
+const createMultipleRealEstateTransactionsControllers = require("../controllers/realEstate/createMultipleRealEstateTransactionsControllers.js");
+const updateRealEstateTransactionsControllers = require("../controllers/realEstate/updateRealEstateTransactionsControllers");
 const router = express.Router();
 const verifyToken = require("../middleware/verifyToken");
 router.post("/create", verifyToken, createRealEstateTransactionsControllers);
