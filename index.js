@@ -10,10 +10,12 @@ const mFundsTransactions = require("./routers/mFundsTransactionsRouter");
 const stocksTransactionsReducer = require("./routers/stocksTransactionsRouter");
 const realEstateTransactionRouter = require("./routers/realEstateTransactionsRouter");
 const fDepositsRouter = require("./routers/fDepositsRouter");
+const cors = require("cors");
 // const { saveData } = require("./controllers/nseStocks");
 dotenv.config();
 
 const app = express();
+app.use(cors());
 app.use(express.json());
 mongoose.set("strictQuery", false);
 const connectDB = async () => {
