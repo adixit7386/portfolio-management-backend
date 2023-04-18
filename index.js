@@ -31,9 +31,7 @@ const connectDB = async () => {
 connectDB();
 // saveData();
 app.get("/", (req, res) => {
-  console.log(req);
-  console.log("hello world");
-  res.send("hello world");
+  res.send("app working fine");
 });
 app.use("/api/user", userRouter);
 app.use("/api/nseStocks", nseStocksRouter);
